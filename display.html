@@ -1,0 +1,82 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Offer Tracker</title>
+		<script src="addoffer.js"></script>
+	</head>
+	<body>
+		<div id="listDiv">
+			<p>What is the property's list price?</p>
+			<input type="number" id="txtList"/>
+			<button type="button" onclick=addList()>Submit</button>
+		</div>
+		<div id="offerDiv" style="display:none">
+		<table id="offerTable" border="1">
+			<tr>
+				<td colspan="11" id="offerTableHeader"></td>
+			</tr>
+			<tr>
+				<td>Date</td>
+				<td>Party</td>
+				<td>Amount</td>
+				<td>Closing Credit</td>
+				<td>Extras Value</td>
+				<td>Extras Type</td>
+				<td>Amount Seller Receives</td>
+				<td>Offer from List</td>
+				<td>Offer from Previous</td>
+				<td>Midpoint</td>
+				<td>Offer Chain</td>
+		</table>
+		<table>
+			<tr>
+				<td colspan="2">Add a new offer</td>
+			</tr>
+			<tr>
+				<td>Date:&nbsp;</td>
+				<td><input type="text" id="txtDate"/></td>
+			</tr>
+			<tr>
+				<td>Party:&nbsp;</td>
+				<td><select id="selectParty">
+						<option value="Buyer">Buyer</option>
+						<option value="Seller">Seller</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Amount:&nbsp;</td>
+				<td><input type="number" id="txtAmount"/></td>
+			</tr>
+			<tr>
+				<td>Closing Credit:&nbsp;</td>
+				<td><input type="number" id="txtClosingCredit"/></td>
+			</tr>
+			<tr>
+				<td>Extras Value:&nbsp;</td>
+				<td><input type="number" id="txtExtrasValue"/></td>
+			</tr>
+			<tr>
+				<td>Extras Type:&nbsp;</td>
+				<td><input type="text" id="txtExtrasType"/></td>
+			</tr>
+			<tr>
+				<td>Parent Offer:&nbsp;</td>
+				<td><select id="selectParent">
+						<option value="newParentOffer">New</option> <!-- when this is selected, add an "Offer 1" option -->
+			</tr>
+			<tr>
+				<td colspan="2"><button type="button" id="buttonAdd" onclick=addOffer()>Add Offer</button></td>
+			</tr>
+		</table>
+		</div>
+	</body>
+</html>
+
+
+<!-- 
+Other possible info to consider:
+-Amount down
+-terms
+-rates
+-->
